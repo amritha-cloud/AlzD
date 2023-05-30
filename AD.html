@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Upload</title>
+  <style>
+    /* Add the CSS styles from the first HTML file here */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .nav-links li {
+      margin-right: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    input[type="file"] {
+      margin-top: 10px;
+    }
+
+    #preview {
+      max-width: 500px;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #4caf50;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:active {
+      background-color: #3e8e41;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <h1 style="color: #fff;">AtINeu AI Tool</h1>
+    </div>
+  </nav>
+  <form method="post" action="/ADPred" enctype="multipart/form-data">
+    <label for="image-upload" style="color: #333;">Choose an image to upload (Alzheimer Prediction):</label>
+    <input type="file" name="file" class="form-control" autocomplete="off" required>
+    <div id="preview"></div>
+    <button type="submit" id="submit-button" value="Submit">Predict For AD</button>
+  </form>
+  <script>
+    // JavaScript code remains the same
+  </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alzheimer's Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: #003049;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+
+      .nav-links li {
+        margin-right: 20px;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #edf2f4;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 50px 20px;
+      }
+
+      .header-text {
+        flex: 1 1 50%;
+        text-align: left;
+      }
+
+      .header-text h2 {
+        font-size: 36px;
+        color: #003049;
+        margin-bottom: 20px;
+      }
+
+      .header-text p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .header-image {
+        flex: 1 1 50%;
+      }
+
+      .header-image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .social-media {
+        background-color: #003049;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .social-media ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+
+      .social-media ul li {
+        margin-right: 10px;
+      }
+
+      .social-media ul li a {
+        color: #fff;
+        font-size: 24px;
+        transition: color 0.3s ease;
+      }
+
+      .social-media ul li a:hover {
+        color: #edf2f4;
+      }
+    </style>
+
+    <script>
+      function openNewPage() {
+        var selectElement = document.getElementById('selectOption');
+        var selectedValue = selectElement.value;
+        if (selectedValue !== '') {
+          window.open(selectedValue, '_blank');
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="static/logo.png" alt="Company Logo" />
+        <h1>AtINeu (Artificial Intelligence in Neurology)</h1>
+      </div>
+      <ul class="nav-links">
+        <select id="selectOption" onchange="openNewPage()">
+          <option value="{{ url_for('index') }}" selected>Select AI Tool</option>
+          <option value="{{ url_for('stroke') }}" target="_blank">Stroke</option>
+          <option value="{{ url_for('AD') }}" target="_blank">Alzheimer</option>
+        </select>
+      </ul>
+    </nav>
+
+    <header>
+      <div class="header-text">
+        <h2>Alzheimer's Disease Prediction</h2>
+        <p>
+          Alzheimer's disease is a progressive and irreversible neurological
+          disorder that primarily affects memory, thinking skills, and
+          behavior. It is the most common cause of dementia, a syndrome
+          characterized by a decline in cognitive abilities severe enough to
+          interfere with daily functioning. The exact cause of Alzheimer's
+          disease is not yet fully understood, but it is believed to involve a
+          combination of genetic, lifestyle, and environmental factors. The
+          disease is characterized by the accumulation of abnormal protein
+          deposits, including beta-amyloid plaques and tau tangles, in the
+          brain. These deposits disrupt the communication between nerve cells
+          and eventually lead to the death of brain cells.
+        </p>
+      </div>
+      <div class="header-image">
+        <img src="static/brain ML.jpg" alt="Company Image" />
+      </div>
+    </header>
+      <!-- Founders Section -->
+      <section class="founders">
+        <h3>Project creators</h3>
+        <div class="founder">
+          <img src="static/Amrithas.jpeg" alt="Founder 1" />
+          <h4>Amritha s</h4>
+          <p>creator</p>
+        </div>
+        <div class="founder">
+          <img src="static/Anushab.jpeg" alt="Founder 2" />
+          <h4>Anusha B</h4>
+          <p>creator</p>
+        </div>
+        <div class="founder">
+          <img src="static/Priyankak.jpeg" alt="Founder 3" />
+          <h4>Priyanka K</h4>
+          <p>creator</p>
+        </div>
+    </div>
+  </body>
+</html>
